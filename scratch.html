@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pickleball Passion – Scratch Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a class="nav-logo" href="index.html">Professional Pages</a>
+        <div class="nav-links">
+            <a href="#why">Why Pickleball</a>
+            <a href="#reasons">Reasons</a>
+            <a href="#video">Video</a>
+            <a href="#tableau">Tableau</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section" id="why">
+        <h1>Why I Love Pickleball</h1>
+        <p>Pickleball blends fun, fitness, and strategy for all levels.</p>
+    </div>
+    <div class="section" id="reasons">
+        <h2>Reasons Pickleball is Amazing</h2>
+        <ol>
+            <li>Easy to Learn</li>
+            <li>Great Exercise
+                <ul>
+                    <li>Cardio</li>
+                    <li>Agility</li>
+                    <li>Hand-eye coordination</li>
+                </ul>
+            </li>
+            <li>Social and Fun</li>
+        </ol>
+    </div>
+    <div class="section" id="video">
+        <h2>Learn the Basics</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rD1O3hS6KJ8" allowfullscreen></iframe>
+    </div>
+    <div class="section" id="tableau">
+        <h2>Interactive Tableau Visualization</h2>
+        <div class="tableauPlaceholder" id="viz168">
+            <noscript><a href="#"><img alt="Tableau Graph" src="https://public.tableau.com/static/images/Wo/WorldIndicators/GDPperCapita/1.png"></a></noscript>
+            <object class="tableauViz">
+                <param name="host_url" value="https://public.tableau.com/">
+                <param name="embed_code_version" value="3">
+                <param name="site_root" value="">
+                <param name="name" value="WorldIndicators/GDPperCapita">
+                <param name="tabs" value="no">
+                <param name="toolbar" value="yes">
+            </object>
+        </div>
+        <script type="text/javascript">
+            var divElement = document.getElementById("viz168");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            vizElement.style.width = "100%";
+            vizElement.style.height = "600px";
+            var scriptElement = document.createElement("script");
+            scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+
+    <div class="section">
+        <a class="home-button" href="index.html">← Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

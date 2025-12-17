@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Resume | Reed Robertson</title>
+
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --card:#1f2933;
+      --accent:#38bdf8;
+      --accent2:#a78bfa;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --radius:16px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:linear-gradient(135deg,#020617,var(--bg));
+      color:var(--text);
+      scroll-behavior:smooth;
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(2,6,23,0.85);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 24px;
+    }
+    nav .brand{ font-weight:800; letter-spacing:0.5px; color:var(--accent); }
+    nav a{ color:var(--text); text-decoration:none; margin-left:16px; font-weight:600; }
+    nav a:hover{color:var(--accent)}
+    section{ max-width:1100px; margin:auto; padding:80px 24px; }
+    .hero{ text-align:center; padding-top:100px; }
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:10px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .hero p{ max-width:700px; margin:auto; font-size:1.1rem; color:var(--muted); }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+    .card{ background:var(--card); border-radius:var(--radius); padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+    h2{ margin-top:0; color:var(--accent); }
+    ul{padding-left:18px} li{margin:10px 0}
+    .video{ margin-top:10px; aspect-ratio:16/9; }
+    iframe{ width:100%; height:100%; border:none; border-radius:12px; }
+    .project-links a{ display:inline-block; margin-top:10px; color:var(--accent); text-decoration:none; font-weight:600; }
+    .project-links a:hover{ text-decoration:underline; }
+    footer{ text-align:center; padding:40px 20px; color:var(--muted); font-size:0.9rem; }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="brand">Reed Robertson</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#resume">Resume</a>
+      <a href="#sports">Sports</a>
+      <a href="#recreation">Recreation</a>
+    </div>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Personal Resume</h1>
+  <p>Professional, creative, and driven. This site highlights my experience, athletic background, and recreational passions in one clean and modern format.</p>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="card">
+    <ul>
+      <li>I am an Eagle Scout</li>
+      <li>I graduated High School a year early</li>
+      <li>I served a mission for the Church of Jesus Christ of Latter-day Saints</li>
+      <li>I have experience in administrative leadership</li>
+      <li>I attend Brigham Young University (BYU)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="sports">
+  <h2>Sports</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Soccer</h3>
+      <p>Fast-paced, strategic, and team-oriented.</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/1w7OgIMMRc4" allowfullscreen></iframe></div>
+    </div>
+    <div class="card">
+      <h3>Hockey</h3>
+      <p>High energy, physical, and exciting.</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/9TgPz0c6p0I" allowfullscreen></iframe></div>
+    </div>
+    <div class="card">
+      <h3>Wrestling</h3>
+      <p>Discipline, strength, and mental toughness.</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/4qJgF2k0z5U" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section id="recreation">
+  <h2>Recreation & Hobbies</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Singing in Choir</h3>
+      <p>Performing in group vocal settings and concerts.</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/3rQO1j1k7WQ" allowfullscreen></iframe></div>
+    </div>
+
+    <div class="card">
+      <h3>Playing the Trumpet</h3>
+      <p>Musical performance and ensemble experience.</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/5fM2xkG5dWw" allowfullscreen></iframe></div>
+    </div>
+
+    <div class="card">
+      <h3>Acting</h3>
+      <p>Stage presence, storytelling, and creativity.</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/Fq3r5p0zjGI" allowfullscreen></iframe></div>
+    </div>
+
+    <!-- Coding Projects Card -->
+    <div class="card project-links">
+      <h3>Coding Projects</h3>
+      <p>In addition to creative hobbies, I enjoy building interactive projects using HTML, CSS, and JavaScript.</p>
+      <ul>
+        <li>
+          <strong>Snake Game:</strong> A browser-based game I coded from scratch.
+          <br><a href="game.html">Play the Snake Game</a>
+        </li>
+        <li>
+          <strong>Scratch Page:</strong> A separate interactive page I designed and coded.
+          <br><a href="scratch.html">View the Scratch Page</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Reed Robertson • Single-page HTML Resume
+</footer>
+</body>
+</html>
