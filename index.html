@@ -1,166 +1,214 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Personal Resume | Reed Robertson</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reed Robertson | Résumé &amp; Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0f172a;
-      --panel:#111827;
-      --card:#1f2933;
-      --accent:#38bdf8;
-      --accent2:#a78bfa;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --radius:16px;
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:linear-gradient(135deg,#020617,var(--bg));
-      color:var(--text);
-      scroll-behavior:smooth;
-    }
-    header{
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:rgba(2,6,23,0.85);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-    }
-    nav{
-      max-width:1100px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 24px;
-    }
-    nav .brand{ font-weight:800; letter-spacing:0.5px; color:var(--accent); }
-    nav a{ color:var(--text); text-decoration:none; margin-left:16px; font-weight:600; }
-    nav a:hover{color:var(--accent)}
-    section{ max-width:1100px; margin:auto; padding:80px 24px; }
-    .hero{ text-align:center; padding-top:100px; }
-    .hero h1{
-      font-size:3rem;
-      margin-bottom:10px;
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-    .hero p{ max-width:700px; margin:auto; font-size:1.1rem; color:var(--muted); }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-    .card{ background:var(--card); border-radius:var(--radius); padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
-    h2{ margin-top:0; color:var(--accent); }
-    ul{padding-left:18px} li{margin:10px 0}
-    .video{ margin-top:10px; aspect-ratio:16/9; }
-    iframe{ width:100%; height:100%; border:none; border-radius:12px; }
-    .project-links a{ display:inline-block; margin-top:10px; color:var(--accent); text-decoration:none; font-weight:600; }
-    .project-links a:hover{ text-decoration:underline; }
-    footer{ text-align:center; padding:40px 20px; color:var(--muted); font-size:0.9rem; }
+    :root { --navy:#1e3a8a; --sky:#0ea5e9; --ink:#1f2937; --muted:#6b7280; }
+    body { font-family:'Inter', system-ui, sans-serif; color:var(--ink); background:#f8fafc; }
+    h1, h2, h3 { font-family:'Merriweather', Georgia, serif; }
+    .navbar { background:var(--navy); }
+    .navbar .nav-link { color:#e0e7ff; }
+    .navbar .nav-link:hover, .navbar .nav-link:focus { color:#fff; }
+    .hero { background:linear-gradient(135deg, var(--navy), var(--sky)); color:#fff; padding:6rem 0 5rem; }
+    .hero img { max-width:220px; }
+    .hero .lead { color:#e0f2fe; }
+    section { padding:4.5rem 0; scroll-margin-top:60px; }
+    .section-title { color:var(--navy); margin-bottom:2rem; }
+    .section-title::after { content:""; display:block; width:60px; height:4px; background:var(--sky); margin-top:.6rem; border-radius:2px; }
+    .resume-card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:1.75rem; height:100%; }
+    .resume-card h3 { font-size:1.15rem; color:var(--navy); }
+    .entry + .entry { margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid #f1f5f9; }
+    .entry-title { font-weight:700; margin:0; }
+    .entry-meta { color:var(--muted); font-size:.9rem; }
+    .skill { display:inline-block; background:#e0f2fe; color:#075985; border-radius:999px; padding:.3rem .8rem; margin:.2rem; font-size:.9rem; font-weight:600; }
+    .feature { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:1.5rem; height:100%; transition:transform .2s, box-shadow .2s; }
+    .feature:hover { transform:translateY(-4px); box-shadow:0 10px 24px rgba(30,58,138,.12); }
+    .feature i { font-size:2rem; color:var(--sky); }
+    .alt { background:#eef2ff; }
+    .project-card { background:#fff; border-radius:12px; border:1px solid #e5e7eb; overflow:hidden; height:100%; }
+    .project-card .banner { height:140px; display:flex; align-items:center; justify-content:center; font-size:3rem; color:#fff; }
+    footer { background:var(--navy); color:#c7d2fe; }
   </style>
 </head>
-
 <body>
-<header>
-  <nav>
-    <div class="brand">Reed Robertson</div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#resume">Resume</a>
-      <a href="#sports">Sports</a>
-      <a href="#recreation">Recreation</a>
-    </div>
-  </nav>
-</header>
 
-<section id="home" class="hero">
-  <h1>Personal Resume</h1>
-  <p>Professional, creative, and driven. This site highlights my experience, athletic background, and recreational passions in one clean and modern format.</p>
-</section>
-
-<section id="resume">
-  <h2>Resume</h2>
-  <div class="card">
-    <ul>
-      <li>I am an Eagle Scout</li>
-      <li>I graduated High School a year early</li>
-      <li>I served a mission for the Church of Jesus Christ of Latter-day Saints</li>
-      <li>I have experience in administrative leadership</li>
-      <li>I attend Brigham Young University (BYU)</li>
-    </ul>
-  </div>
-</section>
-
-<section id="sports">
-  <h2>Sports</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Soccer</h3>
-      <p>Fast-paced, strategic, and team-oriented.</p>
-      <div class="video"><iframe src="https://www.youtube.com/embed/1w7OgIMMRc4" allowfullscreen></iframe></div>
-    </div>
-    <div class="card">
-      <h3>Hockey</h3>
-      <p>High energy, physical, and exciting.</p>
-      <div class="video"><iframe src="https://www.youtube.com/embed/9TgPz0c6p0I" allowfullscreen></iframe></div>
-    </div>
-    <div class="card">
-      <h3>Wrestling</h3>
-      <p>Discipline, strength, and mental toughness.</p>
-      <div class="video"><iframe src="https://www.youtube.com/embed/4qJgF2k0z5U" allowfullscreen></iframe></div>
-    </div>
-  </div>
-</section>
-
-<section id="recreation">
-  <h2>Recreation & Hobbies</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Singing in Choir</h3>
-      <p>Performing in group vocal settings and concerts.</p>
-      <div class="video"><iframe src="https://www.youtube.com/embed/3rQO1j1k7WQ" allowfullscreen></iframe></div>
-    </div>
-
-    <div class="card">
-      <h3>Playing the Trumpet</h3>
-      <p>Musical performance and ensemble experience.</p>
-      <div class="video"><iframe src="https://www.youtube.com/embed/5fM2xkG5dWw" allowfullscreen></iframe></div>
-    </div>
-
-    <div class="card">
-      <h3>Acting</h3>
-      <p>Stage presence, storytelling, and creativity.</p>
-      <div class="video"><iframe src="https://www.youtube.com/embed/Fq3r5p0zjGI" allowfullscreen></iframe></div>
-    </div>
-
-    <!-- Coding Projects Card -->
-    <div class="card project-links">
-      <h3>Coding Projects</h3>
-      <p>In addition to creative hobbies, I enjoy building interactive projects using HTML, CSS, and JavaScript.</p>
-      <ul>
-        <li>
-          <strong>Snake Game:</strong> A browser-based game I coded from scratch.
-          <br><a href="game.html">Play the Snake Game</a>
-        </li>
-        <li>
-          <strong>Scratch Page:</strong> A separate interactive page I designed and coded.
-          <br><a href="scratch.html">View the Scratch Page</a>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">Reed Robertson</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Résumé</a></li>
+        <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="scratch.html">Pickleball Page</a></li>
+        <li class="nav-item"><a class="nav-link" href="game.html">Snake Game</a></li>
       </ul>
     </div>
+  </div>
+</nav>
 
+<header class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-7">
+        <h1 class="display-5 fw-bold">Reed Robertson</h1>
+        <p class="lead mb-4">BYU student and financial advisor. Eagle Scout, returned missionary, and a leader who likes building things, from client relationships to web projects.</p>
+        <a href="#resume" class="btn btn-light btn-lg me-2">View Résumé</a>
+        <a href="#projects" class="btn btn-outline-light btn-lg">See Projects</a>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="images/hero.svg" alt="Reed Robertson monogram" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <p>I'm a student at Brigham Young University who also works as a financial advisor. In that role I help clients plan for their goals, and I train newer advisors by sitting in on their client meetings and coaching them afterward.</p>
+        <p>Before college I finished high school a year early, earned the rank of Eagle Scout, and served a full-time mission for The Church of Jesus Christ of Latter-day Saints. Those experiences taught me to lead, to work hard, and to communicate with people from every walk of life.</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="resume-card">
+          <h3><i class="bi bi-lightning-charge"></i> Quick Facts</h3>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><i class="bi bi-mortarboard text-primary me-2"></i>Student at BYU</li>
+            <li class="mb-2"><i class="bi bi-briefcase text-primary me-2"></i>Financial Advisor</li>
+            <li class="mb-2"><i class="bi bi-award text-primary me-2"></i>Eagle Scout</li>
+            <li><i class="bi bi-globe-americas text-primary me-2"></i>Returned Missionary</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer>
-  © 2025 Reed Robertson • Single-page HTML Resume
+<section id="resume" class="alt">
+  <div class="container">
+    <h2 class="section-title">Résumé</h2>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="resume-card">
+          <h3><i class="bi bi-briefcase"></i> Experience</h3>
+          <div class="entry">
+            <p class="entry-title">Financial Advisor</p>
+            <p class="entry-meta">Current</p>
+            <ul>
+              <li>Meet with clients to understand their goals and build financial plans around them.</li>
+              <li>Train and coach other advisors, sitting in on their client meetings and giving feedback.</li>
+              <li>Manage client relationships and follow-ups with a CRM (Wealthbox) and project boards (Trello).</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <p class="entry-title">Full-Time Missionary</p>
+            <p class="entry-meta">The Church of Jesus Christ of Latter-day Saints</p>
+            <ul>
+              <li>Served a full-time volunteer mission focused on teaching and community service.</li>
+              <li>Held administrative leadership responsibilities: planning, scheduling, and supporting other missionaries.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="resume-card mb-4">
+          <h3><i class="bi bi-mortarboard"></i> Education</h3>
+          <div class="entry">
+            <p class="entry-title">Brigham Young University</p>
+            <p class="entry-meta">Provo, Utah</p>
+            <p class="mb-0">Coursework includes Information Systems (IS 201): HTML, CSS, JavaScript, web hosting, and data visualization.</p>
+          </div>
+          <div class="entry">
+            <p class="entry-title">High School Diploma</p>
+            <p class="entry-meta">Graduated one year early</p>
+          </div>
+        </div>
+        <div class="resume-card mb-4">
+          <h3><i class="bi bi-trophy"></i> Honors &amp; Leadership</h3>
+          <ul class="mb-0">
+            <li>Eagle Scout, Boy Scouts of America</li>
+            <li>Graduated high school a year early</li>
+            <li>Administrative leadership experience</li>
+          </ul>
+        </div>
+        <div class="resume-card">
+          <h3><i class="bi bi-tools"></i> Skills</h3>
+          <span class="skill">Client Relationships</span>
+          <span class="skill">Coaching &amp; Training</span>
+          <span class="skill">Public Speaking</span>
+          <span class="skill">HTML &amp; CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Bootstrap</span>
+          <span class="skill">Tableau</span>
+          <span class="skill">GitHub Pages</span>
+          <span class="skill">Wealthbox CRM</span>
+          <span class="skill">Google Workspace</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="container">
+    <h2 class="section-title">Sports &amp; Activities</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4"><div class="feature"><i class="bi bi-dribbble"></i><h3 class="h5 mt-3">Soccer</h3><p class="mb-0">Fast-paced, strategic, and team-oriented.</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="feature"><i class="bi bi-snow2"></i><h3 class="h5 mt-3">Hockey</h3><p class="mb-0">High energy, physical, and exciting.</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="feature"><i class="bi bi-person-arms-up"></i><h3 class="h5 mt-3">Wrestling</h3><p class="mb-0">Discipline, strength, and mental toughness.</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="feature"><i class="bi bi-music-note-beamed"></i><h3 class="h5 mt-3">Choir</h3><p class="mb-0">Performing in group vocal settings and concerts.</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="feature"><i class="bi bi-music-note-list"></i><h3 class="h5 mt-3">Trumpet</h3><p class="mb-0">Musical performance and ensemble experience.</p></div></div>
+      <div class="col-sm-6 col-lg-4"><div class="feature"><i class="bi bi-mask"></i><h3 class="h5 mt-3">Acting</h3><p class="mb-0">Stage presence, storytelling, and creativity.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="project-card">
+          <div class="banner" style="background:linear-gradient(135deg,#0f3d2e,#22c55e);"><i class="bi bi-circle-half"></i></div>
+          <div class="p-4">
+            <h3 class="h5">Pickleball Page</h3>
+            <p>A page I built from a blank HTML file with my own stylesheet, an embedded video, and an interactive Tableau dashboard.</p>
+            <a class="btn btn-primary" href="scratch.html">Visit the page</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <div class="banner" style="background:linear-gradient(135deg,#020617,#0891b2);"><i class="bi bi-controller"></i></div>
+          <div class="p-4">
+            <h3 class="h5">Wrap-Around Snake</h3>
+            <p>A browser game built with AI: hit a wall and you come out the other side. Includes scoring, a saved high score, levels, and touch controls.</p>
+            <a class="btn btn-primary" href="game.html">Play the game</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-4 text-center">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Reed Robertson</p>
+    <a class="link-light" href="#home">Back to top <i class="bi bi-arrow-up"></i></a>
+  </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

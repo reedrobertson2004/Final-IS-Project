@@ -1,75 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pickleball Passion – Scratch Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pickleball Passion | Reed Robertson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="nav-container">
-        <a class="nav-logo" href="index.html">Professional Pages</a>
-        <div class="nav-links">
-            <a href="#why">Why Pickleball</a>
-            <a href="#reasons">Reasons</a>
-            <a href="#video">Video</a>
-            <a href="#tableau">Tableau</a>
-        </div>
+<div class="navbar" id="top">
+  <div class="nav-container">
+    <a class="nav-logo" href="index.html">&larr; Professional Pages</a>
+    <div class="nav-links">
+      <a href="#why">Why Pickleball</a>
+      <a href="#reasons">Reasons</a>
+      <a href="#video">Video</a>
+      <a href="#tableau">Tableau</a>
+      <a href="game.html">Snake Game</a>
     </div>
-</nav>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Why I Love Pickleball</h1>
+  <p>Pickleball mixes the fun of ping-pong, the strategy of tennis, and the social side of a neighborhood pickup game. Anyone can learn it in an afternoon.</p>
+</div>
 
 <div class="container">
-    <div class="section" id="why">
-        <h1>Why I Love Pickleball</h1>
-        <p>Pickleball blends fun, fitness, and strategy for all levels.</p>
-    </div>
-    <div class="section" id="reasons">
-        <h2>Reasons Pickleball is Amazing</h2>
-        <ol>
-            <li>Easy to Learn</li>
-            <li>Great Exercise
-                <ul>
-                    <li>Cardio</li>
-                    <li>Agility</li>
-                    <li>Hand-eye coordination</li>
-                </ul>
-            </li>
-            <li>Social and Fun</li>
-        </ol>
-    </div>
-    <div class="section" id="video">
-        <h2>Learn the Basics</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rD1O3hS6KJ8" allowfullscreen></iframe>
-    </div>
-    <div class="section" id="tableau">
-        <h2>Interactive Tableau Visualization</h2>
-        <div class="tableauPlaceholder" id="viz168">
-            <noscript><a href="#"><img alt="Tableau Graph" src="https://public.tableau.com/static/images/Wo/WorldIndicators/GDPperCapita/1.png"></a></noscript>
-            <object class="tableauViz">
-                <param name="host_url" value="https://public.tableau.com/">
-                <param name="embed_code_version" value="3">
-                <param name="site_root" value="">
-                <param name="name" value="WorldIndicators/GDPperCapita">
-                <param name="tabs" value="no">
-                <param name="toolbar" value="yes">
-            </object>
-        </div>
-        <script type="text/javascript">
-            var divElement = document.getElementById("viz168");
-            var vizElement = divElement.getElementsByTagName("object")[0];
-            vizElement.style.width = "100%";
-            vizElement.style.height = "600px";
-            var scriptElement = document.createElement("script");
-            scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-    </div>
 
-    <div class="section">
-        <a class="home-button" href="index.html">← Back to Home</a>
+  <div class="section" id="why">
+    <h2>The Game</h2>
+    <div class="two-col">
+      <div>
+        <p>Pickleball is played with solid paddles and a plastic ball with holes, on a court about a third the size of a tennis court. Games go to 11, and you have to win by 2.</p>
+        <p>What hooked me is that it rewards smart placement and patience as much as power. A soft "dink" into the kitchen can win a point just as easily as a hard drive.</p>
+        <p class="callout">Fun fact: the area right next to the net is called the <strong>kitchen</strong>. You can't volley the ball while standing in it.</p>
+      </div>
+      <div>
+        <img src="images/paddle.svg" alt="Illustration of a pickleball paddle and ball">
+      </div>
     </div>
+  </div>
+
+  <div class="section" id="reasons">
+    <h2>Reasons Pickleball Is Amazing</h2>
+    <ol>
+      <li>Easy to learn
+        <ul>
+          <li>Small court and simple rules</li>
+          <li>You can play a real game on your first day</li>
+        </ul>
+      </li>
+      <li>Great exercise
+        <ul>
+          <li>Cardio</li>
+          <li>Agility and footwork</li>
+          <li>Hand-eye coordination</li>
+        </ul>
+      </li>
+      <li>Social and fun
+        <ul>
+          <li>Usually played as doubles</li>
+          <li>Courts are popping up in parks everywhere</li>
+        </ul>
+      </li>
+    </ol>
+    <img src="images/court.svg" alt="Diagram of a pickleball court with the kitchen marked" style="max-width:100%; border-radius:10px;">
+  </div>
+
+  <div class="section" id="video">
+    <h2>Learn the Basics</h2>
+    <p>New to the game? This short video covers the rules and scoring in about five minutes.</p>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/HzspxFKh52c" title="Pickleball rules and scoring explained" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="section" id="tableau">
+    <h2>Interactive Tableau Dashboard</h2>
+    <p>An interactive Tableau Public dashboard. Click the tabs, hover over the map, and filter the data.</p>
+    <iframe class="tableau-frame" src="https://public.tableau.com/views/Superstore_24/Overview?:showVizHome=no&amp;:embed=true&amp;:tabs=yes" title="Interactive Tableau dashboard" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>Explore More</h2>
+    <a class="button" href="index.html">Back to Professional Pages</a>
+    <a class="button alt" href="game.html">Play My Snake Game</a>
+    <a class="button" href="#top">Back to Top</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2025 Reed Robertson &middot; <a href="#top">Back to top</a></p>
 </div>
 
 </body>
