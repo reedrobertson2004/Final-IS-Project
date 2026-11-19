@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t">
+  <title id="t">Pickleball paddle and ball</title>
+  <rect width="400" height="300" rx="16" fill="#0f3d2e"/>
+  <g transform="rotate(-25 170 150)">
+    <rect x="95" y="40" width="150" height="170" rx="60" fill="#f2b705" stroke="#ffffff" stroke-width="6"/>
+    <rect x="150" y="205" width="40" height="80" rx="10" fill="#1b1b1b"/>
+    <rect x="150" y="225" width="40" height="6" fill="#444"/>
+    <rect x="150" y="245" width="40" height="6" fill="#444"/>
+    <rect x="150" y="265" width="40" height="6" fill="#444"/>
+    <text x="170" y="135" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0f3d2e" text-anchor="middle">PB</text>
+  </g>
+  <circle cx="300" cy="190" r="42" fill="#d7f205" stroke="#a9be00" stroke-width="3"/>
+  <g fill="#7f8f00">
+    <circle cx="285" cy="175" r="5"/><circle cx="310" cy="170" r="5"/><circle cx="320" cy="195" r="5"/>
+    <circle cx="295" cy="200" r="5"/><circle cx="280" cy="198" r="4"/><circle cx="305" cy="215" r="5"/>
+  </g>
+</svg>

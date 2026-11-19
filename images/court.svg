@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 220" role="img" aria-labelledby="t">
+  <title id="t">Diagram of a pickleball court with the kitchen marked</title>
+  <rect width="440" height="220" fill="#1f6f4a"/>
+  <rect x="20" y="20" width="400" height="180" fill="#2f80c2" stroke="#fff" stroke-width="4"/>
+  <rect x="166" y="20" width="54" height="180" fill="#5aa5de"/>
+  <rect x="220" y="20" width="54" height="180" fill="#5aa5de"/>
+  <line x1="220" y1="14" x2="220" y2="206" stroke="#111" stroke-width="5"/>
+  <line x1="166" y1="20" x2="166" y2="200" stroke="#fff" stroke-width="3"/>
+  <line x1="274" y1="20" x2="274" y2="200" stroke="#fff" stroke-width="3"/>
+  <line x1="20" y1="110" x2="166" y2="110" stroke="#fff" stroke-width="3"/>
+  <line x1="274" y1="110" x2="420" y2="110" stroke="#fff" stroke-width="3"/>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">
+    <text x="193" y="115">KITCHEN</text>
+    <text x="247" y="115">KITCHEN</text>
+    <text x="93" y="68">Service</text>
+    <text x="347" y="68">Service</text>
+    <text x="93" y="158">Service</text>
+    <text x="347" y="158">Service</text>
+  </g>
+  <text x="220" y="216" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">20 ft x 44 ft court, 7 ft non-volley zone on each side</text>
+</svg>
