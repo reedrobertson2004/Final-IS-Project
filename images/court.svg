@@ -10,8 +10,8 @@
   <line x1="20" y1="110" x2="166" y2="110" stroke="#fff" stroke-width="3"/>
   <line x1="274" y1="110" x2="420" y2="110" stroke="#fff" stroke-width="3"/>
   <g font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="700">
-    <text x="193" y="115">KITCHEN</text>
-    <text x="247" y="115">KITCHEN</text>
+    <text x="193" y="110" transform="rotate(-90 193 110)" dominant-baseline="middle" letter-spacing="2">KITCHEN</text>
+    <text x="247" y="110" transform="rotate(90 247 110)" dominant-baseline="middle" letter-spacing="2">KITCHEN</text>
     <text x="93" y="68">Service</text>
     <text x="347" y="68">Service</text>
     <text x="93" y="158">Service</text>
