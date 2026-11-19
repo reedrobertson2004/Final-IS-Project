@@ -48,9 +48,7 @@ h2 { font-size: 2.2rem; margin: 0 0 1rem; }
 /* 4. Hero banner (div with a background image) */
 .hero {
   background-color: #1f6f4a;
-  background-image: linear-gradient(rgba(15, 61, 46, .75), rgba(15, 61, 46, .75)), url("images/court.svg");
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(135deg, #0f3d2e 0%, #1f6f4a 60%, #2f80c2 100%);
   color: #ffffff;
   text-align: center;
   padding: 90px 20px;
